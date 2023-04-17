@@ -74,3 +74,21 @@ ALU / 컨트롤 유닛 / 버스 인터페이스 / 레지스터 set              
   -Reference Counting(포인터를 막 쓰면 안된다)
   -Shared_Ptr / Weak_Ptr
 
+ 
+ <소켓옵션> c++ 문서 확인
+  
+  <블로킹/논블로킹 소켓>
+   -블로킹 소켓: (프로세스 대기를 타는 부분이 문제가 될 수 있음, 쓰레드 컨텍스트 스위칭이 문제가 될 것임)
+    accept -> 접속한 클라가 있을 때
+    connect -> 서버 접속 성공했을 때
+    send, sendto -> 요청한 데이터를 송신 버퍼에 복사했을 때
+    recv, recvfrom -> 수신 버퍼에 도착한 데이터가 있고, 이를 유저레벨 버퍼에 복사했을 때
+   
+   -논블로킹 소켓: 다양한 소켓 모델들이 존재
+   
+   -Select
+   -WSAEventSelect
+   -Overlapped(이벤트 기반)
+   -OverLapped(콜백 기반)
+   -Completion Port
+   
